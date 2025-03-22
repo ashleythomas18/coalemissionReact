@@ -1,0 +1,97 @@
+.hero-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.hero-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+.hero-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    color: white;
+    margin-top: 90px;
+}
+.carbon-counter{
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-weight: 800;
+    display: block;
+}
+
+.hero-text{
+    font-size: 50px;   
+    font-weight: bold;    
+}
+
+.hero-subtext{
+    font-size: 30px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.play-button{
+    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 1150px;
+}
+.play-button:hover{
+    
+    cursor: pointer;
+}
+.play-button p{
+    font-weight: bold;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    margin-top: -200px;
+    gap: 10px; 
+}
+  
+.cta-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d4a017; /* Customize the color */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 1160px;
+    margin-bottom: 30px;
+}
+  
+.cta-icon {
+    font-size: 24px;
+    color: white;
+    
+}
+
+.cta-text {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 7px;
+    color: #ffffff;
+    margin-left: 26px;
+}
+  

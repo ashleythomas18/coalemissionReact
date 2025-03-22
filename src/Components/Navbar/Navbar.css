@@ -1,0 +1,49 @@
+.nav{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    justify-content: space-between;
+    margin: 15px 50px;
+}
+/* only carbon emission calc wala part will be edited
+because li a => because it is the only item inside <li> 
+that uses <a> (anchor tag). */
+
+.nav-menu li a{
+    text-decoration: none;
+    color:white;
+}
+.nav-menu li a:visited{
+    color: #ffffff;
+}
+.nav-menu li a:hover{
+    text-decoration: underline;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+.logo-image {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 2px;
+    border-radius: 90px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 80px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-about{
+    border-radius: 40px;
+    background-color: rgb(255, 188, 141);
+    color: #262626;
+    padding: 10px 20px;
+}
