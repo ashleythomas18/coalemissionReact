@@ -4,6 +4,7 @@ import Background from './Components/Background/Background';
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from './Components/Hero/Hero';
 import Calculator from './Components/Calculator/Calculator';
+import About from './Components/About/About';
 
 const App = () => {
   let heroData = [
@@ -24,10 +25,8 @@ const App = () => {
 
   return (
     <div>
-      {/* ✅ Navbar stays outside so it's always visible */}
+      
       <Navbar />
-
-      {/* ✅ Only render components inside Routes dynamically */}
       <Routes>
         <Route path="/" element={
           <>
@@ -43,6 +42,7 @@ const App = () => {
         } />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/background" element={<Background />} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/hero" element={
           <Hero
             setPlayStatus={setPlayStatus}

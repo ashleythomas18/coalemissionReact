@@ -19,28 +19,28 @@ const Calculator = () => {
             case "coalBurning":
                 if (coalWeight && burningEfficiency) {
                     const emission = (coalWeight * 2.5 * (burningEfficiency / 100)).toFixed(2);
-                    output = `${emission} MT CO₂`;
+                    output = emission+ " MT CO₂";
                 }
                 break;
 
             case "methaneEmission":
                 if (coalMined) {
                     const methaneEmission = (coalMined * 0.3).toFixed(2);
-                    output = `${methaneEmission} kg CH₄`;
+                    output = methaneEmission+ " kg CH₄";
                 }
                 break;
 
             case "renewableReduction":
                 if (renewableEnergy) {
                     const savedCO2 = (renewableEnergy * 500).toFixed(2);
-                    output = `${savedCO2} kg CO₂ saved`;
+                    output = savedCO2+ " kg CO₂ saved";
                 }
                 break;
 
             case "treeAbsorption":
                 if (treesPlanted && years) {
                     const absorbedCO2 = (treesPlanted * 22 * years).toFixed(2);
-                    output = `${absorbedCO2} kg CO₂ absorbed`;
+                    output = absorbedCO2+ " kg CO₂ absorbed";
                 }
                 break;
 
