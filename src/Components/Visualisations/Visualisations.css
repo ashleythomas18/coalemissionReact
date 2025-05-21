@@ -1,0 +1,23 @@
+.visualisation-container {
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.chart-box {
+  width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}

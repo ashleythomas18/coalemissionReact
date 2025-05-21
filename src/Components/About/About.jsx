@@ -15,34 +15,35 @@ const About = () => {
 
       <div className="highlight-boxes">
         <div className="highlight-card">
-          <h2>👩‍💻 Who Built This?</h2>
+          <h2>Who Built This?</h2>
           <p>
             Created by a data-driven mind with a passion for change, this project is an intersection 
             of engineering, empathy, and environmental innovation.
           </p>
-          <h2>👩‍💻 Who Built This?</h2>
+          <h2>Who’s Behind the Code?</h2>
           <p>
-            Created by a data-driven mind with a passion for change, this project is an intersection 
-            of engineering, empathy, and environmental innovation.
+            This project was created by people who believe that real change starts with asking “what if?” 
+            and following it up with a lot of late-night debugging.
+
           </p>
-          <h2>👩‍💻 Who Built This?</h2>
+          <h2>Who Built This?</h2>
           <p>
             Created by a data-driven mind with a passion for change, this project is an intersection 
             of engineering, empathy, and environmental innovation.
           </p>
         </div>
         <div className="highlight-card">
-          <h2>🌱 Why It Matters</h2>
+          <h2>Why It Matters</h2>
           <p>
             Each ton of coal emits more than just CO₂. 
             We help you monitor, reduce, and rethink emissions — smartly and sustainably.
           </p>
-          <h2>🌱 Why It Matters</h2>
+          <h2>Why It Matters</h2>
           <p>
             Each ton of coal emits more than just CO₂. 
             We help you monitor, reduce, and rethink emissions — smartly and sustainably.
           </p>
-          <h2>🌱 Why It Matters</h2>
+          <h2>Why It Matters</h2>
           <p>
             Each ton of coal emits more than just CO₂. 
             We help you monitor, reduce, and rethink emissions — smartly and sustainably.

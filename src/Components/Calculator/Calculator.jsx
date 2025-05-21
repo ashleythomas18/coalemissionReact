@@ -1,5 +1,6 @@
-import { useState } from "react";   
+import { useState, useContext} from "react";   
 import './Calculator.css';
+import { EmissionContext } from "../../EmissionContext";
 
 const Calculator = () => {
     const [selectedOption, setSelectedOption] = useState("");  
@@ -10,52 +11,58 @@ const Calculator = () => {
     const [treesPlanted, setTreesPlanted] = useState("");
     const [years, setYears] = useState("");
 
+    const { setEmissionData } = useContext(EmissionContext);
+
     const [result, setResult] = useState(null);
 
-    const calculate = () => {
-        let output = "Invalid input";
+   const calculate = () => {
+  let output = "Invalid input";
 
-        switch (selectedOption) {
-            case "coalBurning":
-                if (coalWeight && burningEfficiency) {
-                    const emission = (coalWeight * 2.5 * (burningEfficiency / 100)).toFixed(2);
-                    output = emission+ " MT CO₂";
-                }
-                break;
+  switch (selectedOption) {
+    case "coalBurning":
+      if (coalWeight && burningEfficiency) {
+        const emission = (coalWeight * 2.5 * (burningEfficiency / 100)).toFixed(2);
+        setEmissionData((prev) => ({ ...prev, coal: parseFloat(emission) }));
+        output = `${emission} MT CO₂`;
+      }
+      break;
 
-            case "methaneEmission":
-                if (coalMined) {
-                    const methaneEmission = (coalMined * 0.3).toFixed(2);
-                    output = methaneEmission+ " kg CH₄";
-                }
-                break;
+    case "methaneEmission":
+      if (coalMined) {
+        const methaneEmission = (coalMined * 0.3).toFixed(2);
+        setEmissionData((prev) => ({ ...prev, methane: parseFloat(methaneEmission) }));
+        output = `${methaneEmission} kg CH₄`;
+      }
+      break;
 
-            case "renewableReduction":
-                if (renewableEnergy) {
-                    const savedCO2 = (renewableEnergy * 500).toFixed(2);
-                    output = savedCO2+ " kg CO₂ saved";
-                }
-                break;
+    case "renewableReduction":
+      if (renewableEnergy) {
+        const savedCO2 = (renewableEnergy * 500).toFixed(2);
+        setEmissionData((prev) => ({ ...prev, renewable: parseFloat(savedCO2) }));
+        output = `${savedCO2} kg CO₂ saved`;
+      }
+      break;
 
-            case "treeAbsorption":
-                if (treesPlanted && years) {
-                    const absorbedCO2 = (treesPlanted * 22 * years).toFixed(2);
-                    output = absorbedCO2+ " kg CO₂ absorbed";
-                }
-                break;
+    case "treeAbsorption":
+      if (treesPlanted && years) {
+        const absorbedCO2 = (treesPlanted * 22 * years).toFixed(2);
+        setEmissionData((prev) => ({ ...prev, trees: parseFloat(absorbedCO2) }));
+        output = `${absorbedCO2} kg CO₂ absorbed`;
+      }
+      break;
 
-            default:
-                output = "Please select an option";
-        }
+    default:
+      output = "Please select an option";
+  }
 
-        setResult(output);
-    };
+  setResult(output);
+};
 
     return (
         <div className="calculator-container">
             <h1>Carbon Emission Calculator</h1>
 
-            {/* Selection Dropdown */}
+         
             <label>Select a calculation type:</label>
             <select value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)}>
                 <option value="">-- Choose an Option --</option>

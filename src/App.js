@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from './Components/Hero/Hero';
 import Calculator from './Components/Calculator/Calculator';
 import About from './Components/About/About';
+import Visualisations from './Components/Visualisations/Visualisations';
 
 const App = () => {
   let heroData = [
@@ -42,6 +43,7 @@ const App = () => {
         } />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/background" element={<Background />} />
+        <Route path="/visualisations" element={<Visualisations />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/hero" element={
           <Hero

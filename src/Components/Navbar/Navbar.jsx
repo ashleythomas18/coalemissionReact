@@ -11,7 +11,10 @@ export const Navbar = () => {
         </div>
         <ul className="nav-menu">
         {location.pathname !=="/Calculator" &&<li>Home</li>}
-        {location.pathname !=="/Calculator" &&<li>Equipments Used</li>}
+        <li>
+  <Link to="/visualisations">Visualisations</Link>
+</li>
+
             <li>
               <Link to = "/Calculator">Coal Emission Calculator</Link></li>
         {location.pathname !=="/Calculator" && <li>Carbon Credits</li>}

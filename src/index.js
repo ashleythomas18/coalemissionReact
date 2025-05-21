@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { EmissionProvider } from './EmissionContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter> {/* ✅ Wrap App inside BrowserRouter */}
-    <App />
+  <BrowserRouter>
+    <EmissionProvider>
+      <App />
+    </EmissionProvider>
   </BrowserRouter>
 );
 
