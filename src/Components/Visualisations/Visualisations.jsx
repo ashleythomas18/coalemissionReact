@@ -38,8 +38,13 @@ const Visualisation = () => {
     labels: ['Coal Burning', 'Methane', 'Renewables', 'Trees'],
     datasets: [
       {
-        label: 'Emission Quantity (MT)',
-        data: [1200, 800, 300, 400], // sample data
+        label: 'Emission Sources',
+      data: [
+        emissionData.coal,
+        emissionData.methane,
+        emissionData.renewable,
+        emissionData.trees
+      ],
         backgroundColor: [
         '#c90255',   
         '#dad103',   

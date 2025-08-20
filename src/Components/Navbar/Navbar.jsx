@@ -10,9 +10,11 @@ export const Navbar = () => {
         <img src={team} alt="GreenTech Logo" className="logo-image" />
         </div>
         <ul className="nav-menu">
-        {location.pathname !=="/Calculator" &&<li>Home</li>}
+        <li>{location.pathname !=="/Calculator"}
+  <Link to="/.">Home</Link>
+</li>
         <li>
-  <Link to="/visualisations">Visualisations</Link>
+  <Link to="/visualisations">Dashboard</Link>
 </li>
 
             <li>

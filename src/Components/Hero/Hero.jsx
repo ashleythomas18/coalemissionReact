@@ -2,12 +2,12 @@ import './Hero.css';
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
-import play_icon from '../../assets/play_icon.png'
-import pause_icon from '../../assets/pause_icon.png'
+import play_icon from '../../assets/play_icon.png'; 
+import pause_icon from '../../assets/pause_icon.png';
 // import { useNavigate } from 'react-router-dom';
 
 
-const Hero= ({setPlayStatus, playStatus, heroData}) =>{
+const Hero= ({setPlayStatus, playStatus, heroData, heroCount, setHeroCount}) =>{
     const[carbonEmissions, setCarbonEmissions]= useState(1000000);
     // const navigate= useNavigate();
    useEffect(() =>{
@@ -21,11 +21,9 @@ const Hero= ({setPlayStatus, playStatus, heroData}) =>{
     return(
         <div className="hero-container">
          { <video className='hero-video' autoPlay={playStatus} loop muted= {!playStatus}>
-                <source src="../../assets/video1.mp4" type='video/mp4'/>
+                <source src="./video3.mp4" type='video/mp4'/> 
              </video>}
-
             
-
             <div className="hero-overlay">
                 <div className="carbon-counter"> Global Emissions:<br></br>{carbonEmissions.toLocaleString()} Tons CO2</div>
                 <h1 className="hero-text">{heroData.text1}</h1>
@@ -48,4 +46,4 @@ const Hero= ({setPlayStatus, playStatus, heroData}) =>{
     )
 }
 
-export default Hero
+export default Hero;
